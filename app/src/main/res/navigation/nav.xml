@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/todosFragment2">
+    <fragment
+        android:id="@+id/todosFragment2"
+        android:name="com.todoapp.ui.TodosFragment"
+        android:label="Todos"
+        tools:layout="@layout/fragment_todos">
+        <action
+            android:id="@+id/action_todosFragment2_to_showTodoFragment"
+            app:destination="@id/showTodoFragment" />
+        <action
+            android:id="@+id/action_todosFragment2_to_addEditTodoFragment"
+            app:destination="@id/addEditTodoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showTodoFragment"
+        android:name="com.todoapp.ui.ShowTodoFragment"
+        android:label="Todo Details"
+        tools:layout="@layout/fragment_show_todo">
+        <argument
+            android:name="todo"
+            app:argType="com.todoapp.data.Todo" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_showTodoFragment_to_addEditTodoFragment"
+            app:destination="@id/addEditTodoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEditTodoFragment"
+        android:name="com.todoapp.ui.AddEditTodoFragment"
+        android:label="Todo Edit"
+        tools:layout="@layout/fragment_add_edit_todo">
+        <argument
+            android:name="todo"
+            android:defaultValue="@null"
+            app:argType="com.todoapp.data.Todo"
+            app:nullable="true" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_addEditTodoFragment_to_todosFragment2"
+            app:destination="@id/todosFragment2" />
+    </fragment>
+    <dialog
+        android:id="@+id/deleteTodoDialogFragment"
+        android:name="com.todoapp.ui.DeleteTodoDialogFragment"
+        android:label="DeleteTodoDialogFragment" >
+        <argument
+            android:name="todo"
+            app:argType="com.todoapp.data.Todo" />
+    </dialog>
+    <action android:id="@+id/action_global_deleteTodoDialogFragment" app:destination="@id/deleteTodoDialogFragment" />
+</navigation>

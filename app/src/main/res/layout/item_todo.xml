@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp">
+
+    <CheckBox
+        android:id="@+id/checkbox_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:buttonTint="#0F1A20"/>
+
+    <TextView
+        android:id="@+id/todo_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/checkbox_done"
+        android:layout_alignBottom="@+id/checkbox_done"
+        android:layout_marginRight="8dp"
+        android:layout_toEndOf="@+id/checkbox_done"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="#0F1A20"
+        android:layout_toStartOf="@+id/todo_category"
+        tool:text="Example text asjdnjsakndasjklndljkasndlknaslkdnaslkdnaslkndlkasndkaslndlkasndklasndklasndlka" />
+
+    <TextView
+        android:id="@+id/todo_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/checkbox_done"
+        android:layout_alignBottom="@+id/checkbox_done"
+        android:layout_marginRight="32dp"
+        android:layout_alignParentEnd="true"
+        android:gravity="center_vertical"
+        android:textColor="#0F1A20"
+        android:maxLines="1"
+        tool:text="Category" />
+
+    <ImageView
+        android:id="@+id/important_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/checkbox_done"
+        android:layout_alignBottom="@+id/checkbox_done"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/baseline_fiber_manual_record_24"
+        app:tint="#EC9A29" />
+
+</RelativeLayout>
