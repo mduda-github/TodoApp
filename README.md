@@ -59,4 +59,3 @@ Thank you for using the Todo Application! Stay productive and organized.
 ## Screenshots
 
 ![Image](https://github.com/mduda-github/TodoApp/blob/main/assets/TodoApp1.png)
-![Image](https://github.com/mduda-github/TodoApp/blob/main/assets/TodoApp2.png)
